@@ -1,4 +1,4 @@
-create: guessinggame.sh
+all: guessinggame.sh
 	touch README.md
 	echo "## GUESSING GAME using bash " >> README.md
 	echo "by Mitika Surana" >> README.md
@@ -7,6 +7,5 @@ create: guessinggame.sh
 	date >> README.md
 	echo "" 
 	echo "Number of files is current directory: " >> README.md
-	wc -l guessinggame.sh >> README.md
-clean:
+	wc -l guessinggame.sh | egrep -o "[0-9]+" >> README.md
 	rm README.md
