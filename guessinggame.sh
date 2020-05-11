@@ -4,9 +4,6 @@ function count
  read response
  try=true
  direc=$(ls -Aq | wc -l)
- #true_ans=$(ls -l |grep "^-"|wc -l)
-
- #echo $direc
  while [[ $try -eq true ]]
  do
    if [[ $response -eq $direc ]]
@@ -17,12 +14,10 @@ function count
       then
       echo "Your answer is greater than actual value. Try again"
       count 
-   elif [[ $response -lt $direc]]
+   elif [[ $response -lt $direc ]]
+      then
       echo "Your answer is lesser than actual value. Try again"
       count 
-   else
-      echo "Thats an invalid input. Please try again"
-      count
    fi
  done
 }
