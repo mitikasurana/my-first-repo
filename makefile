@@ -1,9 +1,12 @@
-create: 
+create: guessinggame.sh
 	touch README.md
-	make write
-write: README.md guessinggame.sh
-	echo "GUESSING GAME using bash by Mitika Surana" >> README.md
+	echo "## GUESSING GAME using bash " >> README.md
+	echo "by Mitika Surana" >> README.md
+	echo "" >> README.md
+	echo "Make was generated : " >> README.md
 	date >> README.md
+	echo "" 
+	echo "Number of files is current directory: " >> README.md
 	wc -l guessinggame.sh >> README.md
 clean:
 	rm README.md
