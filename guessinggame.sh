@@ -1,6 +1,6 @@
 function count 
 {
- echo "Enter the number of files in current directory"
+ echo "Guess the number of files in current directory"
  read response
  try=true
  direc=$(ls -Aq | wc -l)
