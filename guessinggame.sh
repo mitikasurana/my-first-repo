@@ -4,6 +4,8 @@ function count
  read response
  try=true
  direc=$(ls -Aq | wc -l)
+ #true_ans=$(ls -l |grep "^-"|wc -l)
+
  #echo $direc
  while [[ $try -eq true ]]
  do
