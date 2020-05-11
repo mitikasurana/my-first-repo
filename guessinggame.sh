@@ -3,7 +3,7 @@ function count
  echo "Enter the number of files in current directory"
  read response
  try=true
- direc=$(ls | wc -l)
+ direc=$(ls -Aq | wc -l)
  #echo $direc
  while [[ $try -eq true ]]
  do
@@ -15,9 +15,12 @@ function count
       then
       echo "Your answer is greater than actual value. Try again"
       count 
-   else
+   elif [[ $response -lt $direc]]
       echo "Your answer is lesser than actual value. Try again"
-      count   
+      count 
+   else
+      echo "Thats an invalid input. Please try again"
+      count
    fi
  done
 }
