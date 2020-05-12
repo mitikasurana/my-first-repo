@@ -1,9 +1,7 @@
-all: README.md
-
 create: guessinggame.sh
 	touch README.md
 	echo "## GUESSING GAME using bash " >> README.md
-	echo "by Mitika Surana" >> README.md
+	echo "by Mitika" >> README.md
 	echo "" >> README.md
 	echo "Make was generated : $$(date)" >> README.md
 	echo "" >> README.md 
